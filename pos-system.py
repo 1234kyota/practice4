@@ -16,12 +16,16 @@ class Order:
     
     def add_item_order(self,item_code):
         self.item_order_list.append(item_code)
-        
+    
+    def view_item(self):
+        for item in self.item_master:
+            print(f"商品コード:{item.item_code} 商品名:{item.item_name} 値段:{item.price}")
+
     def view_item_list(self):
         for item in self.item_order_list:
             print("商品コード:{}".format(item))
     
-    
+
 ### メイン処理
 def main():
     # マスタ登録
@@ -37,7 +41,8 @@ def main():
     order.add_item_order("003")
     
     # オーダー表示
-    order.view_item_list()
+    # order.view_item_list()
+    order.view_item()
     
 if __name__ == "__main__":
     main()

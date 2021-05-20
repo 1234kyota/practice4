@@ -67,10 +67,6 @@ def main():
     # オーダー登録
     order=Order(item_master)
 
-    # order.add_item_order("001")
-    # order.add_item_order("002")
-    # order.add_item_order("003")
-
     while True:
         order_input = input("オーダーを入力してください。中断する場合は0を入力してください")
         if order_input == "0":
@@ -86,14 +82,6 @@ def main():
     order.total_price()
     order.exchange()
 
-    # レシート出力
-
-
-
-    # with open(filename, mode='w') as f:
-    #     f.write(str(x))
-    #     f.write(str(y))
-    #     f.write(str(z))
     
 if __name__ == "__main__":
     main()
